@@ -1,0 +1,14 @@
+{
+  "language": "Hindi (हिन्दी)",
+  "iso_639_1": "hi",
+  "rich_entries": 102720,
+  "total_verified_words": 411241,
+  "with_definitions": 102720,
+  "with_synonyms": 96073,
+  "with_antonyms": 6814,
+  "with_examples": 102646,
+  "chunk_files": 54,
+  "unicode_normalization": "NFC",
+  "license": "GPL-3.0",
+  "generated_at": "2026-11-12T06:47:56.372Z"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hindi Open Lexicon Entry",
+  "type": "object",
+  "required": ["id", "word", "pos", "def", "sources"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^hi-[0-9]{6}$" },
+    "word": { "type": "string", "minLength": 1 },
+    "pos": { "type": "array", "items": { "type": "string" } },
+    "def": { "type": "array", "items": { "type": "string" } },
+    "synonyms": { "type": "array", "items": { "type": "string" } },
+    "antonyms": { "type": "array", "items": { "type": "string" } },
+    "examples": { "type": "array", "items": { "type": "string" } },
+    "sources": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+  }
+}

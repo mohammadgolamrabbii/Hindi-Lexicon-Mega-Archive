@@ -1,0 +1,326 @@
+[
+  {
+    "char": "१",
+    "code": "967",
+    "file": "hi_967.json",
+    "count": 30
+  },
+  {
+    "char": "२",
+    "code": "968",
+    "file": "hi_968.json",
+    "count": 45
+  },
+  {
+    "char": "३",
+    "code": "969",
+    "file": "hi_969.json",
+    "count": 18
+  },
+  {
+    "char": "४",
+    "code": "96a",
+    "file": "hi_96a.json",
+    "count": 8
+  },
+  {
+    "char": "५",
+    "code": "96b",
+    "file": "hi_96b.json",
+    "count": 24
+  },
+  {
+    "char": "६",
+    "code": "96c",
+    "file": "hi_96c.json",
+    "count": 26
+  },
+  {
+    "char": "७",
+    "code": "96d",
+    "file": "hi_96d.json",
+    "count": 28
+  },
+  {
+    "char": "८",
+    "code": "96e",
+    "file": "hi_96e.json",
+    "count": 17
+  },
+  {
+    "char": "९",
+    "code": "96f",
+    "file": "hi_96f.json",
+    "count": 22
+  },
+  {
+    "char": "अ",
+    "code": "905",
+    "file": "hi_905.json",
+    "count": 11199
+  },
+  {
+    "char": "आ",
+    "code": "906",
+    "file": "hi_906.json",
+    "count": 3322
+  },
+  {
+    "char": "इ",
+    "code": "907",
+    "file": "hi_907.json",
+    "count": 1647
+  },
+  {
+    "char": "ई",
+    "code": "908",
+    "file": "hi_908.json",
+    "count": 297
+  },
+  {
+    "char": "उ",
+    "code": "909",
+    "file": "hi_909.json",
+    "count": 2199
+  },
+  {
+    "char": "ऊ",
+    "code": "90a",
+    "file": "hi_90a.json",
+    "count": 153
+  },
+  {
+    "char": "ऋ",
+    "code": "90b",
+    "file": "hi_90b.json",
+    "count": 88
+  },
+  {
+    "char": "ए",
+    "code": "90f",
+    "file": "hi_90f.json",
+    "count": 870
+  },
+  {
+    "char": "ऐ",
+    "code": "910",
+    "file": "hi_910.json",
+    "count": 174
+  },
+  {
+    "char": "ऑ",
+    "code": "911",
+    "file": "hi_911.json",
+    "count": 96
+  },
+  {
+    "char": "ओ",
+    "code": "913",
+    "file": "hi_913.json",
+    "count": 177
+  },
+  {
+    "char": "औ",
+    "code": "914",
+    "file": "hi_914.json",
+    "count": 127
+  },
+  {
+    "char": "क",
+    "code": "915",
+    "file": "hi_915.json",
+    "count": 7107
+  },
+  {
+    "char": "ख",
+    "code": "916",
+    "file": "hi_916.json",
+    "count": 1599
+  },
+  {
+    "char": "ग",
+    "code": "917",
+    "file": "hi_917.json",
+    "count": 3399
+  },
+  {
+    "char": "घ",
+    "code": "918",
+    "file": "hi_918.json",
+    "count": 607
+  },
+  {
+    "char": "ङ",
+    "code": "919",
+    "file": "hi_919.json",
+    "count": 1
+  },
+  {
+    "char": "च",
+    "code": "91a",
+    "file": "hi_91a.json",
+    "count": 2771
+  },
+  {
+    "char": "छ",
+    "code": "91b",
+    "file": "hi_91b.json",
+    "count": 659
+  },
+  {
+    "char": "ज",
+    "code": "91c",
+    "file": "hi_91c.json",
+    "count": 3331
+  },
+  {
+    "char": "झ",
+    "code": "91d",
+    "file": "hi_91d.json",
+    "count": 492
+  },
+  {
+    "char": "ञ",
+    "code": "91e",
+    "file": "hi_91e.json",
+    "count": 1
+  },
+  {
+    "char": "ट",
+    "code": "91f",
+    "file": "hi_91f.json",
+    "count": 976
+  },
+  {
+    "char": "ठ",
+    "code": "920",
+    "file": "hi_920.json",
+    "count": 279
+  },
+  {
+    "char": "ड",
+    "code": "921",
+    "file": "hi_921.json",
+    "count": 784
+  },
+  {
+    "char": "ढ",
+    "code": "922",
+    "file": "hi_922.json",
+    "count": 240
+  },
+  {
+    "char": "ण",
+    "code": "923",
+    "file": "hi_923.json",
+    "count": 7
+  },
+  {
+    "char": "त",
+    "code": "924",
+    "file": "hi_924.json",
+    "count": 3313
+  },
+  {
+    "char": "थ",
+    "code": "925",
+    "file": "hi_925.json",
+    "count": 281
+  },
+  {
+    "char": "द",
+    "code": "926",
+    "file": "hi_926.json",
+    "count": 3601
+  },
+  {
+    "char": "ध",
+    "code": "927",
+    "file": "hi_927.json",
+    "count": 1233
+  },
+  {
+    "char": "न",
+    "code": "928",
+    "file": "hi_928.json",
+    "count": 4277
+  },
+  {
+    "char": "प",
+    "code": "92a",
+    "file": "hi_92a.json",
+    "count": 8120
+  },
+  {
+    "char": "फ",
+    "code": "92b",
+    "file": "hi_92b.json",
+    "count": 1492
+  },
+  {
+    "char": "ब",
+    "code": "92c",
+    "file": "hi_92c.json",
+    "count": 4850
+  },
+  {
+    "char": "भ",
+    "code": "92d",
+    "file": "hi_92d.json",
+    "count": 1883
+  },
+  {
+    "char": "म",
+    "code": "92e",
+    "file": "hi_92e.json",
+    "count": 6384
+  },
+  {
+    "char": "य",
+    "code": "92f",
+    "file": "hi_92f.json",
+    "count": 883
+  },
+  {
+    "char": "र",
+    "code": "930",
+    "file": "hi_930.json",
+    "count": 3289
+  },
+  {
+    "char": "ल",
+    "code": "932",
+    "file": "hi_932.json",
+    "count": 2126
+  },
+  {
+    "char": "व",
+    "code": "935",
+    "file": "hi_935.json",
+    "count": 4527
+  },
+  {
+    "char": "श",
+    "code": "936",
+    "file": "hi_936.json",
+    "count": 3121
+  },
+  {
+    "char": "ष",
+    "code": "937",
+    "file": "hi_937.json",
+    "count": 64
+  },
+  {
+    "char": "स",
+    "code": "938",
+    "file": "hi_938.json",
+    "count": 8293
+  },
+  {
+    "char": "ह",
+    "code": "939",
+    "file": "hi_939.json",
+    "count": 2163
+  }
+]

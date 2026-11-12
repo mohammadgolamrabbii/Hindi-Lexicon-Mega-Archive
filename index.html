@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hindi Lexicon Mega-Archive — 411,241+ Open-Source Hindi Words</title>
+  <meta name="description" content="Open-source Hindi (हिन्दी) lexicon & verified wordlist archive: 102,720+ rich dictionary entries with definitions, POS, synonyms, antonyms & examples, plus 411,241+ NFC-normalized spellcheck words." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; }
+    .hi-font { font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- Top Header -->
+  <header class="border-b border-slate-800 bg-slate-950/95 sticky top-0 z-30 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🇮🇳</span>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2 flex-wrap">
+            Hindi Lexicon Mega-Archive
+            <span class="text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">GPL-3.0 Open Data</span>
+          </h1>
+          <p class="text-xs text-slate-400">102,720+ Rich WordNet Entries • 411,241+ Verified NFC Words • Curated by Mohammad Golamrabbii</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-xs font-semibold flex-wrap">
+        <a href="https://github.com/mohammadgolamrabbii/Hindi-Lexicon-Mega-Archive" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 transition">🐙 GitHub Repo</a>
+        <a href="https://mohammadgolamrabbii.github.io/typography/" target="_blank" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition">🔤 6,519+ Hindi Fonts</a>
+        <a href="https://mohammadgolamrabbii.github.io/Bangla-Lexicon-Mega-Archive/" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition">🇧🇩 Bangla Lexicon</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex-1">
+    <!-- Hero Search & Stats -->
+    <div class="bg-gradient-to-br from-slate-900 via-amber-950/20 to-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-7 mb-6 shadow-2xl">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 text-center">
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-amber-400" id="statRich">102,720</div>
+          <div class="text-[11px] text-slate-400">Rich WordNet Entries</div>
+        </div>
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-cyan-400" id="statTotal">411,241</div>
+          <div class="text-[11px] text-slate-400">Verified NFC Words</div>
+        </div>
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-emerald-400" id="statSyn">96,073</div>
+          <div class="text-[11px] text-slate-400">With Synonyms</div>
+        </div>
+        <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
+          <div class="text-xl sm:text-2xl font-black text-indigo-400" id="statEx">102,646</div>
+          <div class="text-[11px] text-slate-400">With Examples</div>
+        </div>
+      </div>
+
+      <!-- Search Controls -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <span class="absolute left-3.5 top-3.5 text-slate-400">🔍</span>
+          <input id="searchInput" type="text" placeholder="हिन्दी शब्द, पर्यायवाची या अर्थ खोजें (जैसे: शिवालय, अरण्य, पवित्र)..."
+            class="hi-font w-full pl-10 pr-4 py-3 rounded-xl bg-slate-950 border border-slate-700 focus:border-amber-500 focus:outline-none text-sm text-white placeholder-slate-500" />
+        </div>
+        <select id="posFilter" class="px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-sm text-slate-200 focus:border-amber-500 focus:outline-none">
+          <option value="all">All POS (सभी पद)</option>
+          <option value="noun">Noun (संज्ञा)</option>
+          <option value="verb">Verb (क्रिया)</option>
+          <option value="adjective">Adjective (विशेषण)</option>
+          <option value="adverb">Adverb (क्रियाविशेषण)</option>
+        </select>
+        <button id="loadAllBtn" onclick="loadAllChunks()" class="px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-bold transition whitespace-nowrap">
+          ⚡ Deep Search All Chunks
+        </button>
+      </div>
+
+      <!-- Alphabet Ribbon -->
+      <div class="mt-4 pt-4 border-t border-slate-800/80">
+        <div class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-2">Browse by Devanagari Letter (वर्णानुक्रम):</div>
+        <div id="alphabetRibbon" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1"></div>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-400 mb-4 px-1 flex-wrap gap-2">
+      <span id="statusText">Loading Hindi chunk index...</span>
+      <div class="flex items-center gap-3">
+        <a href="dist/hindi_lexicon_rich_part1.jsonl" download class="text-amber-400 hover:underline font-semibold">⬇ JSONL Part 1 (30 MB)</a>
+        <a href="dist/hindi_lexicon_rich_part2.jsonl" download class="text-amber-400 hover:underline font-semibold">⬇ JSONL Part 2 (29 MB)</a>
+        <a href="dist/hindi_wordlist_verified.txt" download class="text-cyan-400 hover:underline font-semibold">⬇ 411k Wordlist (.txt)</a>
+      </div>
+    </div>
+
+    <!-- Results Grid -->
+    <div id="resultsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+    <!-- Pagination -->
+    <div id="loadMoreWrap" class="text-center mt-8 hidden">
+      <button onclick="showMore()" class="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm font-bold text-white transition">
+        Load More Entries ↓
+      </button>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500 mt-10">
+    <p>Open Lexicon Foundation • Curated by <a href="https://github.com/mohammadgolamrabbii" target="_blank" class="text-amber-400 hover:underline">Mohammad Golamrabbii</a> • Licensed under GNU GPL-3.0</p>
+  </footer>
+
+  <script>
+    let manifest = [];
+    const chunkCache = new Map();
+    let activeItems = [];
+    let filteredItems = [];
+    let displayLimit = 48;
+    let allLoaded = false;
+
+    async function init() {
+      try {
+        const [statsRes, manRes] = await Promise.all([
+          fetch('dist/stats.json'),
+          fetch('dist/chunks/manifest.json')
+        ]);
+        const stats = await statsRes.json();
+        manifest = await manRes.json();
+
+        document.getElementById('statRich').textContent = stats.rich_entries.toLocaleString();
+        document.getElementById('statTotal').textContent = stats.total_verified_words.toLocaleString();
+        document.getElementById('statSyn').textContent = stats.with_synonyms.toLocaleString();
+        document.getElementById('statEx').textContent = stats.with_examples.toLocaleString();
+
+        renderAlphabetRibbon();
+        const defaultChunk = manifest.find(m => m.char === 'अ') || manifest[0];
+        if (defaultChunk) await selectChunk(defaultChunk.code);
+      } catch (err) {
+        document.getElementById('statusText').textContent = '⚠️ Error loading index: ' + err.message;
+      }
+    }
+
+    function renderAlphabetRibbon() {
+      const ribbon = document.getElementById('alphabetRibbon');
+      ribbon.innerHTML = manifest.map(m => `
+        <button data-code="${m.code}" onclick="selectChunk('${m.code}')"
+          class="alpha-btn hi-font shrink-0 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-sm font-bold text-slate-200 transition"
+          title="${m.count.toLocaleString()} words">
+          ${m.char} <span class="text-[10px] text-slate-500 font-normal">${m.count}</span>
+        </button>
+      `).join('');
+    }
+
+    async function fetchChunk(code) {
+      if (chunkCache.has(code)) return chunkCache.get(code);
+      const entry = manifest.find(m => m.code === code);
+      if (!entry) return [];
+      const res = await fetch(`dist/chunks/${entry.file}`);
+      const data = await res.json();
+      chunkCache.set(code, data);
+      return data;
+    }
+
+    async function selectChunk(code) {
+      document.querySelectorAll('.alpha-btn').forEach(b => {
+        b.classList.remove('bg-amber-500', 'text-slate-950', 'border-amber-400');
+        if (b.dataset.code === code) b.classList.add('bg-amber-500', 'text-slate-950', 'border-amber-400');
+      });
+      document.getElementById('statusText').textContent = 'Loading Devanagari entries...';
+      activeItems = await fetchChunk(code);
+      displayLimit = 48;
+      applyFilters();
+    }
+
+    async function loadAllChunks() {
+      if (allLoaded) return;
+      const btn = document.getElementById('loadAllBtn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Indexing 102,720 entries...';
+      const all = [];
+      for (const m of manifest) {
+        const items = await fetchChunk(m.code);
+        for (const item of items) all.push(item);
+      }
+      activeItems = all;
+      allLoaded = true;
+      btn.textContent = '✅ All 102,720 Entries Indexed';
+      btn.classList.replace('bg-indigo-600', 'bg-emerald-700');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const pos = document.getElementById('posFilter').value;
+
+      filteredItems = activeItems.filter(item => {
+        if (pos !== 'all' && !item.pos.includes(pos)) return false;
+        if (!q) return true;
+        if (item.word.toLowerCase().includes(q)) return true;
+        if (item.def.some(d => d.toLowerCase().includes(q))) return true;
+        if (item.synonyms.some(s => s.toLowerCase().includes(q))) return true;
+        return false;
+      });
+      renderResults();
+    }
+
+    function renderResults() {
+      const grid = document.getElementById('resultsGrid');
+      const slice = filteredItems.slice(0, displayLimit);
+      document.getElementById('statusText').textContent = `Showing ${slice.length.toLocaleString()} of ${filteredItems.length.toLocaleString()} matching entries`;
+
+      grid.innerHTML = slice.map(item => `
+        <div class="bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 rounded-2xl p-5 flex flex-col justify-between transition shadow-lg">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h2 class="hi-font text-2xl font-extrabold text-white">${escapeHtml(item.word)}</h2>
+              <div class="flex items-center gap-1.5">
+                <button onclick="speak('${escapeAttr(item.word)}')" title="Pronounce" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 transition">🔊</button>
+                <button onclick='copyJson(${JSON.stringify(item).replace(/'/g, "&#39;")})' title="Copy JSON" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 transition">{}</button>
+              </div>
+            </div>
+
+            ${item.pos.length ? `<div class="flex flex-wrap gap-1 mb-3">${item.pos.map(p => `<span class="text-[10px] uppercase px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/20 font-bold">${escapeHtml(p)}</span>`).join('')}</div>` : ''}
+
+            ${item.def.length ? `<div class="hi-font text-sm text-slate-200 mb-2">${escapeHtml(item.def[0])}</div>` : ''}
+            ${item.synonyms.length ? `<div class="mt-2 flex flex-wrap gap-1"><span class="text-[11px] text-slate-500 mr-1">पर्यायवाची:</span>${item.synonyms.slice(0,5).map(s => `<button onclick="jumpSearch('${escapeAttr(s)}')" class="hi-font text-xs px-2 py-0.5 rounded bg-slate-800 hover:bg-amber-600 text-slate-300 hover:text-white transition">${escapeHtml(s)}</button>`).join('')}</div>` : ''}
+            ${item.antonyms.length ? `<div class="mt-2 flex flex-wrap gap-1"><span class="text-[11px] text-rose-400 mr-1">विलोम:</span>${item.antonyms.slice(0,4).map(a => `<button onclick="jumpSearch('${escapeAttr(a)}')" class="hi-font text-xs px-2 py-0.5 rounded bg-rose-950/60 border border-rose-500/20 hover:bg-rose-700 text-rose-200 transition">${escapeHtml(a)}</button>`).join('')}</div>` : ''}
+            ${item.examples.length ? `<div class="hi-font mt-3 pt-2 border-t border-slate-800/80 text-xs text-slate-400">“${escapeHtml(item.examples[0])}”</div>` : ''}
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-800/50 flex items-center justify-between text-[10px] text-slate-500">
+            <span class="font-mono">${item.id}</span>
+            <span>${item.sources.join(', ')}</span>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('loadMoreWrap').classList.toggle('hidden', filteredItems.length <= displayLimit);
+    }
+
+    function showMore() {
+      displayLimit += 48;
+      renderResults();
+    }
+
+    async function jumpSearch(word) {
+      document.getElementById('searchInput').value = word;
+      const firstChar = Array.from(word)[0];
+      if (firstChar) {
+        const code = firstChar.codePointAt(0).toString(16);
+        const match = manifest.find(m => m.code === code);
+        if (match) await selectChunk(match.code);
+      }
+      applyFilters();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let searchTimer;
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(async () => {
+        const val = e.target.value.trim();
+        if (!allLoaded && val) {
+          const firstChar = Array.from(val)[0];
+          const code = firstChar.codePointAt(0).toString(16);
+          const match = manifest.find(m => m.code === code);
+          if (match) {
+            await selectChunk(match.code);
+            return;
+          }
+        }
+        applyFilters();
+      }, 200);
+    });
+
+    document.getElementById('posFilter').addEventListener('change', applyFilters);
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) return;
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'hi-IN';
+      speechSynthesis.speak(u);
+    }
+
+    function copyJson(obj) {
+      navigator.clipboard.writeText(JSON.stringify(obj, null, 2));
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    function escapeAttr(s) {
+      return String(s).replace(/'/g,"\\'");
+    }
+
+    init();
+  </script>
+</body>
+</html>
